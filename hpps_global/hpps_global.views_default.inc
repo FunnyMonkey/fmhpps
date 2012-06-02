@@ -33,27 +33,27 @@ function hpps_global_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'title' => 'title',
-    'body' => 'body',
+    'field_julio_event_date' => 'body',
     'field_hpps_item_link' => 'body',
     'field_hpps_item_name' => 'body',
     'field_hpps_item_quantity' => 'body',
+    'body' => 'body',
     'created' => 'created',
-    'field_julio_event_date' => 'body',
   );
   $handler->display->display_options['style_options']['default'] = 'created';
   $handler->display->display_options['style_options']['info'] = array(
     'title' => array(
-      'sortable' => 1,
+      'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'body' => array(
+    'field_julio_event_date' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
-      'separator' => ' ',
+      'separator' => '',
       'empty_column' => 0,
     ),
     'field_hpps_item_link' => array(
@@ -77,16 +77,16 @@ function hpps_global_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
+    'body' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => ' ',
+      'empty_column' => 0,
+    ),
     'created' => array(
       'sortable' => 1,
       'default_sort_order' => 'desc',
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'field_julio_event_date' => array(
-      'sortable' => 0,
-      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -99,7 +99,7 @@ function hpps_global_views_default_views() {
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
-  $handler->display->display_options['fields']['title']['label'] = 'Additional details';
+  $handler->display->display_options['fields']['title']['label'] = 'Opportunity';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
   $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
@@ -113,40 +113,13 @@ function hpps_global_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
   $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
   $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_type'] = 'strong';
   $handler->display->display_options['fields']['title']['element_label_colon'] = 0;
   $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
   $handler->display->display_options['fields']['title']['hide_empty'] = 0;
   $handler->display->display_options['fields']['title']['empty_zero'] = 0;
   $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
   $handler->display->display_options['fields']['title']['link_to_node'] = 1;
-  /* Field: Content: Body */
-  $handler->display->display_options['fields']['body']['id'] = 'body';
-  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
-  $handler->display->display_options['fields']['body']['field'] = 'body';
-  $handler->display->display_options['fields']['body']['label'] = 'Description';
-  $handler->display->display_options['fields']['body']['alter']['alter_text'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['make_link'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['absolute'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['external'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['replace_spaces'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['nl2br'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
-  $handler->display->display_options['fields']['body']['alter']['more_link'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['trim'] = 0;
-  $handler->display->display_options['fields']['body']['alter']['html'] = 0;
-  $handler->display->display_options['fields']['body']['element_label_colon'] = 0;
-  $handler->display->display_options['fields']['body']['element_default_classes'] = 1;
-  $handler->display->display_options['fields']['body']['hide_empty'] = 0;
-  $handler->display->display_options['fields']['body']['empty_zero'] = 0;
-  $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
-  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
-  $handler->display->display_options['fields']['body']['settings'] = array(
-    'trim_length' => '100',
-  );
-  $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
   /* Field: Content: Event date */
   $handler->display->display_options['fields']['field_julio_event_date']['id'] = 'field_julio_event_date';
   $handler->display->display_options['fields']['field_julio_event_date']['table'] = 'field_data_field_julio_event_date';
@@ -232,7 +205,7 @@ function hpps_global_views_default_views() {
   $handler->display->display_options['fields']['field_hpps_item_quantity']['table'] = 'field_data_field_hpps_item_quantity';
   $handler->display->display_options['fields']['field_hpps_item_quantity']['field'] = 'field_hpps_item_quantity';
   $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['alter_text'] = 1;
-  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['text'] = '[field_hpps_item_name] ([field_hpps_item_quantity]) : [field_hpps_item_link]';
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['text'] = '[field_hpps_item_name] ([field_hpps_item_quantity]): [field_hpps_item_link]';
   $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['make_link'] = 0;
   $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['absolute'] = 0;
   $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['external'] = 0;
@@ -255,6 +228,34 @@ function hpps_global_views_default_views() {
     'prefix_suffix' => 1,
   );
   $handler->display->display_options['fields']['field_hpps_item_quantity']['field_api_classes'] = 0;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = 'Description';
+  $handler->display->display_options['fields']['body']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['body']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['body']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = 0;
+  $handler->display->display_options['fields']['body']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['body']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['body']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['body']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['body']['type'] = 'text_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '100',
+  );
+  $handler->display->display_options['fields']['body']['field_api_classes'] = 0;
   /* Field: Content: Post date */
   $handler->display->display_options['fields']['created']['id'] = 'created';
   $handler->display->display_options['fields']['created']['table'] = 'node';
@@ -345,7 +346,6 @@ function hpps_global_views_default_views() {
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
-  $handler->display->display_options['filters']['type']['expose']['multiple'] = 1;
   $handler->display->display_options['filters']['type']['expose']['reduce'] = 1;
   /* Filter criterion: Content: Status (field_hpps_status) */
   $handler->display->display_options['filters']['field_hpps_status_value']['id'] = 'field_hpps_status_value';
