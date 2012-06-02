@@ -50,7 +50,8 @@ index 3a68b21..7950190 100644
          background: #ccc;
          background: rgba(0,0,0,.1);
 diff --git a/themes/watt/styles/hack-pps.css b/themes/watt/styles/hack-pps.css
-index e69de29..9a20974 100644
+new file mode 100644
+index 000000..9a20974 100644
 --- a/dev/null
 +++ b/themes/watt/styles/hack-pps.css
 @@ -0,0 +1,101 @@
