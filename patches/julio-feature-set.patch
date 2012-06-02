@@ -1,5 +1,5 @@
 diff --git a/julio.info b/julio.info
-index 74d7b57..2414f83 100644
+index 74d7b57..a58d550 100644
 --- a/julio.info
 +++ b/julio.info
 @@ -200,4 +200,23 @@ feature_sets[julio_clubs_announcements][enable][] = julio_clubs_announcements
@@ -10,7 +10,7 @@ index 74d7b57..2414f83 100644
 \ No newline at end of file
 +feature_sets[julio_clubs_announcements][uninstall][] = julio_clubs_announcements_ui
 +
-+feature_sets[hpps_community][title] = Community Outreach 
++feature_sets[hpps_community][title] = Community Outreach
 +feature_sets[hpps_community][description] = Add registration and supplies listing for community outreach.
 +feature_sets[hpps_community][enable][] = hpps_community_event
 +feature_sets[hpps_community][enable][] = hpps_global
@@ -28,66 +28,3 @@ index 74d7b57..2414f83 100644
 +feature_sets[hpps_community][uninstall][] = hpps_ongoing
 +feature_sets[hpps_community][uninstall][] = hpps_supplies
 +
-diff --git a/themes/watt/styles/buttons.css b/themes/watt/styles/buttons.css
-index 3a68b21..7950190 100644
---- a/themes/watt/styles/buttons.css
-+++ b/themes/watt/styles/buttons.css
-@@ -1,5 +1,6 @@
- .button,
--#main-content .content ul.links.inline a
-+#main-content .content ul.links.inline a,
-+.field-name-field-hpps-sign-up a
- {
-         display: inline-block;
-         white-space: nowrap;
-@@ -27,7 +28,8 @@
- }
- 
- .button:hover,
--#main-content .content ul.links.inline a:hover
-+#main-content .content ul.links.inline a:hover,
-+.field-name-field-hpps-sign-up a:hover
- {
-         background-color: #ddd;
-         background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
-@@ -40,7 +42,8 @@
- }
- 
- .button:active,
--#main-content .content ul.links.inline a:active
-+#main-content .content ul.links.inline a:active,
-+.field-name-field-hpps-sign-up a:active
- {
-         -moz-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
-         -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
-@@ -50,14 +53,16 @@
- }
- 
- .button:focus,
--#main-content .content ul.links.inline a:focus
-+#main-content .content ul.links.inline a:focus,
-+.field-name-field-hpps-sign-up a:focus
- {
-         outline: 0;
-         background: #fafafa;
- }    
- 
- .button:before,
--#main-content .content ul.links.inline a:before
-+#main-content .content ul.links.inline a:before,
-+.field-name-field-hpps-sign-up a:before
- {
-         background: #ccc;
-         background: rgba(0,0,0,.1);
-diff --git a/themes/watt/watt.info b/themes/watt/watt.info
-index dc77653..14b1e82 100644
---- a/themes/watt/watt.info
-+++ b/themes/watt/watt.info
-@@ -30,6 +30,7 @@ stylesheets[all][] = styles/colors.css
- stylesheets[all][] = styles/screen.css
- stylesheets[all][] = styles/buttons.css
- stylesheets[all][] = styles/style.css
-+stylesheets[all][] = styles/hack-pps.css
- 
- ; Information added by drupal.org packaging script on 2012-01-02
- version = "7.x-2.0-beta1"
