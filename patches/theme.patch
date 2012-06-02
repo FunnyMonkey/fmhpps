@@ -50,10 +50,10 @@ index 3a68b21..7950190 100644
          background: #ccc;
          background: rgba(0,0,0,.1);
 diff --git a/themes/watt/styles/hack-pps.css b/themes/watt/styles/hack-pps.css
-index e69de29..4085e5d 100644
---- a/themes/watt/styles/hack-pps.css
+index e69de29..9a20974 100644
+--- /dev/null
 +++ b/themes/watt/styles/hack-pps.css
-@@ -0,0 +1,93 @@
+@@ -0,0 +1,101 @@
 +.page-node-register.no-sidebars .region-content-wrapper {
 +  left: 0;
 +  float: none;
@@ -78,6 +78,10 @@ index e69de29..4085e5d 100644
 +  padding: 0.2727em 0 0.3181em;
 +  font-weight: normal;
 +  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
++}
++
++.form-item-count input {
++  min-width: 40px;
 +}
 +
 +.group_hpps_information {
@@ -111,7 +115,11 @@ index e69de29..4085e5d 100644
 +}
 +
 +h2.site-id span {
-+  margin-left: 10px;
++  padding-left: 10px;
++}
++.site-id .logo {
++  margin-right: 0;
++  padding-right: 0.25em;
 +}
 +
 +.site-navigation {
