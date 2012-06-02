@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Supplies feature.
+ */
+
+include_once 'hpps_supplies.features.inc';

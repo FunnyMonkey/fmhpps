@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Ongoing feature.
+ */
+
+include_once 'hpps_ongoing.features.inc';
