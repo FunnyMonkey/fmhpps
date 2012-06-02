@@ -1,8 +1,8 @@
 diff --git a/julio.info b/julio.info
-index 74d7b57..3579d96 100644
+index 74d7b57..7e442a2 100644
 --- a/julio.info
 +++ b/julio.info
-@@ -200,4 +200,24 @@ feature_sets[julio_clubs_announcements][enable][] = julio_clubs_announcements
+@@ -200,4 +200,23 @@ feature_sets[julio_clubs_announcements][enable][] = julio_clubs_announcements
  feature_sets[julio_clubs_announcements][enable][] = julio_clubs_announcements_ui
  feature_sets[julio_clubs_announcements][disable][] = julio_clubs_announcements
  feature_sets[julio_clubs_announcements][disable][] = julio_clubs_announcements_ui
@@ -28,4 +28,3 @@ index 74d7b57..3579d96 100644
 +feature_sets[hpps_community][uninstall][] = hpps_registration
 +feature_sets[hpps_community][uninstall][] = hpps_ongoing
 +feature_sets[hpps_community][uninstall][] = hpps_supplies
-+
