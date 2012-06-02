@@ -48,4 +48,8 @@ git clone git@github.com:FunnyMonkey/fmhpps.git hpps
 echo "Downloading hpps modules"
 drush -y make --no-core --contrib-destination=. hpps/hpps.make
 
+echo "Applying patches"
+cd "${hppswebroot}/${hppswebdir}/profiles/julio"
+git apply "${hppswebroot}/${hppswebdir}/sites/all/modules/hpps/patches/julio-feature-set.patch"
+
 echo "If you saw no errors your site is built at ${hppswebroot}/${hppswebdir}"
