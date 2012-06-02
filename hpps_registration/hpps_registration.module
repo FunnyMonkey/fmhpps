@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HPPS: Registration feature.
+ */
+
+include_once 'hpps_registration.features.inc';
