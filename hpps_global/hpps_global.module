@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the HPPS: Global feature.
+ */
+
+include_once 'hpps_global.features.inc';

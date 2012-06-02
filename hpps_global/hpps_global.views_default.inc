@@ -1,0 +1,272 @@
+<?php
+/**
+ * @file
+ * hpps_global.views_default.inc
+ */
+
+/**
+ * Implements hook_views_default_views().
+ */
+function hpps_global_views_default_views() {
+  $export = array();
+
+  $view = new view;
+  $view->name = 'hpps_supplies';
+  $view->description = '';
+  $view->tag = 'default';
+  $view->base_table = 'node';
+  $view->human_name = 'hpps_supplies';
+  $view->core = 7;
+  $view->api_version = '3.0';
+  $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+  /* Display: Master */
+  $handler = $view->new_display('default', 'Master', 'default');
+  $handler->display->display_options['title'] = 'Supplies';
+  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['cache']['type'] = 'none';
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['query']['options']['query_comment'] = FALSE;
+  $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '10';
+  $handler->display->display_options['style_plugin'] = 'table';
+  $handler->display->display_options['style_options']['columns'] = array(
+    'title' => 'title',
+    'field_hpps_desc_app' => 'field_hpps_desc_app',
+    'field_hpps_item_link' => 'field_hpps_item_link',
+    'field_hpps_item_name' => 'field_hpps_item_name',
+    'field_hpps_item_quantity' => 'field_hpps_item_quantity',
+    'created' => 'created',
+  );
+  $handler->display->display_options['style_options']['default'] = 'created';
+  $handler->display->display_options['style_options']['info'] = array(
+    'title' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_hpps_desc_app' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_hpps_item_link' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_hpps_item_name' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'field_hpps_item_quantity' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+    'created' => array(
+      'sortable' => 1,
+      'default_sort_order' => 'desc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
+  );
+  $handler->display->display_options['style_options']['override'] = 1;
+  $handler->display->display_options['style_options']['sticky'] = 0;
+  $handler->display->display_options['style_options']['empty_table'] = 0;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['label'] = 'Additional details';
+  $handler->display->display_options['fields']['title']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['title']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['title']['element_label_colon'] = 0;
+  $handler->display->display_options['fields']['title']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['title']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['title']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['title']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['title']['link_to_node'] = 1;
+  /* Field: Broken/missing handler */
+  $handler->display->display_options['fields']['field_hpps_desc_app']['id'] = 'field_hpps_desc_app';
+  $handler->display->display_options['fields']['field_hpps_desc_app']['table'] = 'field_data_field_hpps_desc_app';
+  $handler->display->display_options['fields']['field_hpps_desc_app']['field'] = 'field_hpps_desc_app';
+  $handler->display->display_options['fields']['field_hpps_desc_app']['label'] = 'Description/Application';
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_hpps_desc_app']['hide_alter_empty'] = 1;
+  /* Field: Content: Item Link */
+  $handler->display->display_options['fields']['field_hpps_item_link']['id'] = 'field_hpps_item_link';
+  $handler->display->display_options['fields']['field_hpps_item_link']['table'] = 'field_data_field_hpps_item_link';
+  $handler->display->display_options['fields']['field_hpps_item_link']['field'] = 'field_hpps_item_link';
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_link']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_link']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_link']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_hpps_item_link']['field_api_classes'] = 0;
+  /* Field: Content: Item Name */
+  $handler->display->display_options['fields']['field_hpps_item_name']['id'] = 'field_hpps_item_name';
+  $handler->display->display_options['fields']['field_hpps_item_name']['table'] = 'field_data_field_hpps_item_name';
+  $handler->display->display_options['fields']['field_hpps_item_name']['field'] = 'field_hpps_item_name';
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_name']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_name']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_name']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_name']['field_api_classes'] = 0;
+  /* Field: Content: Item Quantity */
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['id'] = 'field_hpps_item_quantity';
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['table'] = 'field_data_field_hpps_item_quantity';
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['field'] = 'field_hpps_item_quantity';
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  $handler->display->display_options['fields']['field_hpps_item_quantity']['field_api_classes'] = 0;
+  /* Field: Content: Post date */
+  $handler->display->display_options['fields']['created']['id'] = 'created';
+  $handler->display->display_options['fields']['created']['table'] = 'node';
+  $handler->display->display_options['fields']['created']['field'] = 'created';
+  $handler->display->display_options['fields']['created']['alter']['alter_text'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['make_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['absolute'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['external'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['replace_spaces'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim_whitespace'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['nl2br'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['word_boundary'] = 1;
+  $handler->display->display_options['fields']['created']['alter']['ellipsis'] = 1;
+  $handler->display->display_options['fields']['created']['alter']['more_link'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['strip_tags'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['trim'] = 0;
+  $handler->display->display_options['fields']['created']['alter']['html'] = 0;
+  $handler->display->display_options['fields']['created']['element_label_colon'] = 1;
+  $handler->display->display_options['fields']['created']['element_default_classes'] = 1;
+  $handler->display->display_options['fields']['created']['hide_empty'] = 0;
+  $handler->display->display_options['fields']['created']['empty_zero'] = 0;
+  $handler->display->display_options['fields']['created']['hide_alter_empty'] = 1;
+  $handler->display->display_options['fields']['created']['date_format'] = 'raw time ago';
+  /* Sort criterion: Content: Updated date */
+  $handler->display->display_options['sorts']['changed']['id'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['table'] = 'node';
+  $handler->display->display_options['sorts']['changed']['field'] = 'changed';
+  $handler->display->display_options['sorts']['changed']['granularity'] = 'day';
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'hpps_supplies' => 'hpps_supplies',
+  );
+  /* Filter criterion: Content: Status (field_hpps_status) */
+  $handler->display->display_options['filters']['field_hpps_status_value']['id'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['table'] = 'field_data_field_hpps_status';
+  $handler->display->display_options['filters']['field_hpps_status_value']['field'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['value'] = array(
+    0 => '0',
+  );
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['operator_id'] = 'field_hpps_status_value_op';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['label'] = 'Fulfillment status';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['operator'] = 'field_hpps_status_value_op';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['identifier'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['reduce'] = 0;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['path'] = 'supplies';
+  $export['hpps_supplies'] = $view;
+
+  return $export;
+}
