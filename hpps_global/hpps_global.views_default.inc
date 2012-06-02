@@ -23,7 +23,7 @@ function hpps_global_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Volunteer Opportunities';
-  $handler->display->display_options['access']['type'] = 'perm';
+  $handler->display->display_options['access']['type'] = 'none';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
@@ -301,6 +301,90 @@ function hpps_global_views_default_views() {
   );
   $handler->display->display_options['filters']['type']['exposed'] = TRUE;
   $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['expose']['use_operator'] = FALSE;
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  $handler->display->display_options['filters']['type']['expose']['required'] = FALSE;
+  $handler->display->display_options['filters']['type']['expose']['remember'] = FALSE;
+  $handler->display->display_options['filters']['type']['expose']['multiple'] = FALSE;
+  /* Filter criterion: Content: Status (field_hpps_status) */
+  $handler->display->display_options['filters']['field_hpps_status_value']['id'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['table'] = 'field_data_field_hpps_status';
+  $handler->display->display_options['filters']['field_hpps_status_value']['field'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['value'] = array(
+    0 => '0',
+  );
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['operator_id'] = 'field_hpps_status_value_op';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['label'] = 'Fulfillment status';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['operator'] = 'field_hpps_status_value_op';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['identifier'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['reduce'] = 0;
+
+  /* Display: Page */
+  $handler = $view->new_display('page', 'Page', 'page');
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'hpps_community_event' => 'hpps_community_event',
+    'hpps_ongoing' => 'hpps_ongoing',
+    'hpps_supplies' => 'hpps_supplies',
+  );
+  $handler->display->display_options['filters']['type']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['label'] = 'Type';
+  $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
+  $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
+  $handler->display->display_options['filters']['type']['expose']['multiple'] = 1;
+  $handler->display->display_options['filters']['type']['expose']['reduce'] = 1;
+  /* Filter criterion: Content: Status (field_hpps_status) */
+  $handler->display->display_options['filters']['field_hpps_status_value']['id'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['table'] = 'field_data_field_hpps_status';
+  $handler->display->display_options['filters']['field_hpps_status_value']['field'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['value'] = array(
+    0 => '0',
+  );
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['operator_id'] = 'field_hpps_status_value_op';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['label'] = 'Fulfillment status';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['operator'] = 'field_hpps_status_value_op';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['identifier'] = 'field_hpps_status_value';
+  $handler->display->display_options['filters']['field_hpps_status_value']['expose']['reduce'] = 0;
+  $handler->display->display_options['path'] = 'supplies';
+
+  /* Display: Feed */
+  $handler = $view->new_display('feed', 'Feed', 'feed_1');
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['style_plugin'] = 'rss';
+  $handler->display->display_options['style_options']['description'] = 'Volunteer opportunities from PPS Hackathon';
+  $handler->display->display_options['row_plugin'] = 'node_rss';
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Content: Published */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = 1;
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'hpps_community_event' => 'hpps_community_event',
+    'hpps_ongoing' => 'hpps_ongoing',
+    'hpps_supplies' => 'hpps_supplies',
+  );
+  $handler->display->display_options['filters']['type']['expose']['operator_id'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['label'] = 'Choose a type of opportunity:';
   $handler->display->display_options['filters']['type']['expose']['operator'] = 'type_op';
   $handler->display->display_options['filters']['type']['expose']['identifier'] = 'type';
@@ -318,10 +402,11 @@ function hpps_global_views_default_views() {
   $handler->display->display_options['filters']['field_hpps_status_value']['expose']['operator'] = 'field_hpps_status_value_op';
   $handler->display->display_options['filters']['field_hpps_status_value']['expose']['identifier'] = 'field_hpps_status_value';
   $handler->display->display_options['filters']['field_hpps_status_value']['expose']['reduce'] = 0;
-
-  /* Display: Page */
-  $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['path'] = 'supplies';
+  $handler->display->display_options['path'] = 'supplies/rss.xml';
+  $handler->display->display_options['displays'] = array(
+    'page' => 'page',
+    'default' => 0,
+  );
   $export['hpps_supplies'] = $view;
 
   return $export;
