@@ -1,8 +1,8 @@
 diff --git a/julio.info b/julio.info
-index 74d7b57..a58d550 100644
+index 74d7b57..3579d96 100644
 --- a/julio.info
 +++ b/julio.info
-@@ -200,4 +200,23 @@ feature_sets[julio_clubs_announcements][enable][] = julio_clubs_announcements
+@@ -200,4 +200,24 @@ feature_sets[julio_clubs_announcements][enable][] = julio_clubs_announcements
  feature_sets[julio_clubs_announcements][enable][] = julio_clubs_announcements_ui
  feature_sets[julio_clubs_announcements][disable][] = julio_clubs_announcements
  feature_sets[julio_clubs_announcements][disable][] = julio_clubs_announcements_ui
@@ -11,6 +11,7 @@ index 74d7b57..a58d550 100644
 +feature_sets[julio_clubs_announcements][uninstall][] = julio_clubs_announcements_ui
 +
 +feature_sets[hpps_community][title] = Community Outreach
++feature_sets[hpps_community][icon] = "feature_set_icons/clipboard.png"
 +feature_sets[hpps_community][description] = Add registration and supplies listing for community outreach.
 +feature_sets[hpps_community][enable][] = hpps_community_event
 +feature_sets[hpps_community][enable][] = hpps_global
