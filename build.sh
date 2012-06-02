@@ -51,6 +51,7 @@ drush -y make --no-core --contrib-destination=. hpps/hpps.make
 echo "Applying patches"
 cd "${hppswebroot}/${hppswebdir}/profiles/julio"
 git apply "${hppswebroot}/${hppswebdir}/sites/all/modules/hpps/patches/julio-feature-set.patch"
+git apply "${hppswebroot}/${hppswebdir}/sites/all/modules/hpps/patches/theme.patch"
 
 cp "${hppswebroot}/${hppswebdir}/sites/all/modules/hpps/patches/clipboard.png" "${hppswebroot}/${hppswebdir}/profiles/julio/feature_set_icons"
 
