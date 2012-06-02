@@ -45,11 +45,11 @@ function hpps_community_event_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '0',
+          'weight' => '3',
         ),
         'teaser' => array(
           'label' => 'hidden',
@@ -63,7 +63,7 @@ function hpps_community_event_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'body',
-      'label' => 'Subject',
+      'label' => 'Description',
       'required' => 0,
       'settings' => array(
         'display_summary' => 1,
@@ -79,72 +79,6 @@ function hpps_community_event_field_default_fields() {
         ),
         'type' => 'text_textarea_with_summary',
         'weight' => '31',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-hpps_community_event-field_hpps_desc_app'
-  $fields['node-hpps_community_event-field_hpps_desc_app'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_hpps_desc_app',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'hpps_community_event',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '1',
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_hpps_desc_app',
-      'label' => 'Description/Application',
-      'required' => 0,
-      'settings' => array(
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'rows' => '5',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '33',
       ),
     ),
   );
@@ -271,7 +205,7 @@ function hpps_community_event_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
@@ -337,7 +271,7 @@ function hpps_community_event_field_default_fields() {
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
+          'label' => 'inline',
           'module' => 'date',
           'settings' => array(
             'format_type' => 'long',
@@ -347,7 +281,7 @@ function hpps_community_event_field_default_fields() {
             'multiple_to' => '',
           ),
           'type' => 'date_default',
-          'weight' => '3',
+          'weight' => '1',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -386,11 +320,10 @@ function hpps_community_event_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Description/Application');
+  t('Description');
   t('Event date');
   t('Sign up');
   t('Status');
-  t('Subject');
 
   return $fields;
 }
