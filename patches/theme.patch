@@ -49,6 +49,105 @@ index 3a68b21..7950190 100644
  {
          background: #ccc;
          background: rgba(0,0,0,.1);
+diff --git a/themes/watt/styles/hack-pps.css b/themes/watt/styles/hack-pps.css
+index e69de29..4085e5d 100644
+--- a/themes/watt/styles/hack-pps.css
++++ b/themes/watt/styles/hack-pps.css
+@@ -0,0 +1,93 @@
++.page-node-register.no-sidebars .region-content-wrapper {
++  left: 0;
++  float: none;
++  display: block;
++  margin-left: auto;
++  margin-right: auto;
++  width: 97.91666666666666%;
++  max-width: 525px;
++}
++
++input {
++  max-width: 95%;
++}
++
++.registration-node .field-name-body {
++  clear: both;
++}
++
++.registration-node .field-name-body .field-label {
++  font-size: 1.5714em;
++  margin: 0.75em 0 0.3181em;
++  padding: 0.2727em 0 0.3181em;
++  font-weight: normal;
++  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
++}
++
++.group_hpps_information {
++  float: left;
++  margin-bottom: 1em;
++  width: auto;
++}
++
++.group_hpps_information .field {
++  background: #FFF3D0;
++  padding: 0.25em 1em;
++}
++
++.view-hpps-supplies .view-filters {
++  background-color: #FFF3D0;
++  float: left;
++  padding: 1px 1em;
++  margin-bottom: 1.5em;
++}
++
++.view-hpps-supplies .view-filters option {
++  min-width: 200px;
++}
++.view-hpps-supplies .view-content {
++  clear: both;
++}
++
++.site-id .logo {
++  width: 100px;
++  margin-top: -0.25em;
++}
++
++h2.site-id span {
++  margin-left: 10px;
++}
++
++.site-navigation {
++  margin-top: 0;
++}
++
++@media screen and (max-width: 510px) {
++  .site-id .logo {
++    float: left;
++    margin-top: -8px;
++  }
++  h2.site-id {
++    text-align: left;
++    width: 260px;
++    text-align: left;
++    padding: 0;
++    margin: 8px auto 0.25em;
++    margin-bottom: .25em;
++    float: none;
++  }
++  .region-header-top {
++    margin-top: 0.25em;
++  }
++    .region-header-top {
++    width: 100%;
++    text-align: center;
++  }
++  .region-header-top ul.menu {
++    text-align: center;
++  }
++  .region-header-top .content,
++  .region-header-top form {
++    margin-bottom: 0;
++  }
++}
+\ No newline at end of file
 diff --git a/themes/watt/watt.info b/themes/watt/watt.info
 index dc77653..14b1e82 100644
 --- a/themes/watt/watt.info
