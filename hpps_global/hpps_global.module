@@ -5,3 +5,13 @@
  */
 
 include_once 'hpps_global.features.inc';
+
+/**
+ * Implements hook_form_alter().
+ */
+function hpps_global_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'registration_form') {
+    $form['who_is_registering']['#type'] = 'value';
+    $form['who_is_registering']['#value'] = 'registration_registrant_type_anon';
+  }
+}
