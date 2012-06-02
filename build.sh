@@ -45,7 +45,7 @@ cd "${hppswebroot}/${hppswebdir}/sites/all/modules"
 echo "cloning hpps..."
 git clone git@github.com:FunnyMonkey/fmhpps.git hpps
 
-echo "##############################"
-pwd
-echo "##############################"
+echo "Downloading hpps modules"
 drush -y make --no-core --contrib-destination=. hpps/hpps.make
+
+echo "If you saw no errors your site is built at ${hppswebroot}/${hppswebdir}"
