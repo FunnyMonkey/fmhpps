@@ -12,7 +12,7 @@ index 3a68b21..7950190 100644
          white-space: nowrap;
 @@ -27,7 +28,8 @@
  }
- 
+
  .button:hover,
 -#main-content .content ul.links.inline a:hover
 +#main-content .content ul.links.inline a:hover,
@@ -22,7 +22,7 @@ index 3a68b21..7950190 100644
          background-image: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ddd));
 @@ -40,7 +42,8 @@
  }
- 
+
  .button:active,
 -#main-content .content ul.links.inline a:active
 +#main-content .content ul.links.inline a:active,
@@ -32,7 +32,7 @@ index 3a68b21..7950190 100644
          -webkit-box-shadow: 0 0 4px 2px rgba(0,0,0,.3) inset;
 @@ -50,14 +53,16 @@
  }
- 
+
  .button:focus,
 -#main-content .content ul.links.inline a:focus
 +#main-content .content ul.links.inline a:focus,
@@ -40,8 +40,8 @@ index 3a68b21..7950190 100644
  {
          outline: 0;
          background: #fafafa;
- }    
- 
+ }
+
  .button:before,
 -#main-content .content ul.links.inline a:before
 +#main-content .content ul.links.inline a:before,
@@ -51,7 +51,7 @@ index 3a68b21..7950190 100644
          background: rgba(0,0,0,.1);
 diff --git a/themes/watt/styles/hack-pps.css b/themes/watt/styles/hack-pps.css
 index e69de29..9a20974 100644
---- /dev/null
+--- a/dev/null
 +++ b/themes/watt/styles/hack-pps.css
 @@ -0,0 +1,101 @@
 +.page-node-register.no-sidebars .region-content-wrapper {
@@ -165,6 +165,6 @@ index dc77653..14b1e82 100644
  stylesheets[all][] = styles/buttons.css
  stylesheets[all][] = styles/style.css
 +stylesheets[all][] = styles/hack-pps.css
- 
+
  ; Information added by drupal.org packaging script on 2012-01-02
  version = "7.x-2.0-beta1"
