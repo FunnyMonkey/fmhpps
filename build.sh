@@ -52,4 +52,6 @@ echo "Applying patches"
 cd "${hppswebroot}/${hppswebdir}/profiles/julio"
 git apply "${hppswebroot}/${hppswebdir}/sites/all/modules/hpps/patches/julio-feature-set.patch"
 
+cp "${hppswebroot}/${hppswebdir}/sites/all/modules/hpps/patches/clipboard.png" "${hppswebroot}/${hppswebdir}/profiles/julio/feature_set_icons"
+
 echo "If you saw no errors your site is built at ${hppswebroot}/${hppswebdir}"
